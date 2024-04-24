@@ -1,0 +1,114 @@
+/* All fonts imports: */
+@import url(https://fonts.bunny.net/css?family=jetbrains-mono:600|martian-mono:400);
+/* Make selected text orange */
+*::selection {
+    background-color: #ffaa00;
+}
+
+/* Setting up cool link underlines */
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #ff9900;
+    transition: 0.4s;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+/* Custom styles */
+body {
+    background-color: #292626; /* Dark gray background */
+}
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    padding: 1rem; /* Reduced side padding */
+    border-radius: 25px; /* Rounded corners */
+    background-color: #302f2f; /* Dark gray background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    color: #fff;
+}
+.social-icons {
+    margin-top: 1rem; /* Add some space between name and social icons */
+    font-size: 3rem;
+}
+.social-icons a {
+    margin-right: 1rem; /* Add space between icons */
+    color: #fff; /* White color for icons */
+}
+
+.social-icons a:hover, .social-icons a:after {
+    margin-right: 1rem; /* Add space between icons */
+    color: #ffaa00; /* White color for icons */
+}
+
+#username {
+    font-family: 'Martian Mono';
+    font-size: clamp(3rem, 10vw, 10rem);
+    color: #ffaa00; /* Orange color for username */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 1rem; /* Adjusted padding for smaller screens */
+    }
+    #username {
+        font-size: clamp(2rem, 7vw, 7rem); /* Adjusted font size for smaller screens */
+    }
+}
+
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+  
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        background-color: #1f1e1e;
+        color: #fff;
+        text-align: center;
+        border-radius: 25px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 0%;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 1rem;
+      }
+  
+      /* Tooltip arrow */
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+
+        border-width: 5px;
+        border-style: solid;
+        border-color: #1f1e1e transparent transparent transparent;
+      }
+  
+      /* Show the tooltip text when hovering over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+
