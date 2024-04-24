@@ -61,7 +61,9 @@ body {
     font-size: clamp(3rem, 10vw, 10rem);
     color: #ffaa00; /* Orange color for username */
 }
-
+#username::selection {
+    color: #fff;
+}
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .card {
