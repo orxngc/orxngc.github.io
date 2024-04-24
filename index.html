@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="chota-main/src/chota.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/c67ad27611.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1 data-value="orangc" id="username">orangc</h1>
+    <article id="about-me">
+        <script>
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            let interval = null;
+
+            document.querySelector("h1").onmouseover = event => {
+                let iteration = 0;
+
+                clearInterval(interval);
+
+                interval = setInterval(() => {
+                    event.target.innerText = event.target.innerText
+                        .split("")
+                        .map((letter, index) => {
+                            if (index < iteration) {
+                                return event.target.dataset.value[index];
+                            }
+
+                            return letters[Math.floor(Math.random() * 26)]
+                        })
+                        .join("");
+
+                    if (iteration >= event.target.dataset.value.length) {
+                        clearInterval(interval);
+                    }
+
+                    iteration += 1 / 3;
+                }, 30);
+            }
+        </script>
+        <p> Hi, you can call me <b id="orange">oc</b> or anything else as long it's appropriate. Ping anytime but don't expect me to respond. I watch <a href="http://myanimelist.net/profile/orangc">anime</a>, play Minecraft, play table tennis.. and I use Linux - NixOS with KDE Plasma. If you're interested, here are my <a href="https://www.github.com/orxngc/dots">dots</a>.</p>
+    </article>
+
+    <article id="contact">
+        <h2 id="contact"><i class="fa-solid fa-link"></i> Links / Socials</h2>
+        Some methods of contacting me, don't expect instant replies.
+        <ul>
+            <li> <span class="fa-brands fa-discord"></span> Discord: @<code><a href="http://discord.com/users/961063229168164864">orangc</a></code> or my backup @<code>orxngc</code>. Note my DMs are closed to people not on my FL.</li>
+            <!-- <li><span class="fa-brands fa-twitter"></span> Twitter: @<code><a href="https://twitter.com/orxngc">orxngc</a></code></li> -->
+            <li><span class="fa-brands fa-reddit"></span> Reddit: u/<code><a href="http://reddit.com/u/sahmed011">sahmed011</a></code></li>
+            <li><i class="fa-solid fa-envelope"></i> Email: <code><a href="mailto:orangc@proton.me">orangc@proton.me</a></code></li>
+        </ul>
+
+    </article>
+
+<footer>
+    © orangc 2024 - site last updated on the 10th of March, 2024, 09.32.
+</footer>
+</body>
+
+</html>
