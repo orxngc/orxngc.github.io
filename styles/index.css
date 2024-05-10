@@ -9,6 +9,7 @@
 a {
     text-decoration: none;
     position: relative;
+    color: #ffaa00;
 }
 
 a:after {
@@ -113,4 +114,12 @@ body {
         opacity: 1;
       }
 
-
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .card {
+        margin-bottom: 20px; /* Add some space between the cards */
+      }
