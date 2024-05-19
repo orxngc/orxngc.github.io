@@ -59,7 +59,7 @@ body {
 
 #username {
     font-family: 'Martian Mono';
-    font-size: clamp(3rem, 10vw, 10rem);
+    font-size: clamp(3rem, 8vw, 8rem);
     color: #ffaa00; /* Orange color for username */
 }
 #username::selection {
