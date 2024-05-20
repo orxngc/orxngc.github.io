@@ -26,9 +26,8 @@ a:hover:after {
     width: 100%;
 }
 
-/* Custom styles */
 body {
-    background-color: #1e1e2e; /* Dark gray background */
+    background-color: #1e1e2e;
 }
 .main-section {
     display: flex;
@@ -37,10 +36,10 @@ body {
     height: 100vh;
 }
 .card {
-    padding: 1rem; /* Reduced side padding */
-    border-radius: 25px; /* Rounded corners */
-    background-color: #181825; /* Dark gray background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    padding: 1rem; 
+    border-radius: 25px;
+    background-color: #181825;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #cdd6f4;
 }
 .social-icons {
@@ -49,18 +48,18 @@ body {
 }
 .social-icons a {
     margin-right: 1rem; /* Add space between icons */
-    color: #cdd6f4; /* White color for icons */
+    color: #cdd6f4; 
 }
 
 .social-icons a:hover, .social-icons a:after {
     margin-right: 1rem; /* Add space between icons */
-    color: #ffaa00; /* White color for icons */
+    color: #ffaa00;
 }
 
 #username {
     font-family: 'Martian Mono';
     font-size: clamp(3rem, 8vw, 8rem);
-    color: #ffaa00; /* Orange color for username */
+    color: #ffaa00; 
 }
 #username::selection {
     color: #fff;
@@ -84,8 +83,8 @@ body {
       /* Tooltip text */
       .tooltip .tooltiptext {
         visibility: hidden;
-        background-color: #1f1e1e;
-        color: #fff;
+        background-color: #313244;
+        color: #cdd6f4;
         text-align: center;
         border-radius: 25px;
         padding: 5px 10px;
@@ -96,16 +95,6 @@ body {
         opacity: 0;
         transition: opacity 0.3s;
         font-size: 1rem;
-      }
-  
-      /* Tooltip arrow */
-      .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-
-        border-width: 5px;
-        border-style: solid;
-        border-color: #1f1e1e transparent transparent transparent;
       }
   
       /* Show the tooltip text when hovering over the tooltip container */
