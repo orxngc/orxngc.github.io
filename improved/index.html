@@ -14,16 +14,18 @@
     <link rel="shortcut icon" href="../leaf.ico" type="image/x-icon" />
     <style type="text/css">
         @import url(https://fonts.bunny.net/css?family=merriweather:400);
+        @import url(https://fonts.bunny.net/css?family=poppins:400);
 
         body {
             margin: 40px auto;
             max-width: 650px;
             line-height: 1.6;
             font-size: 18px;
-            background-color: #eff1f5;
-            color: #4c4f69;
+            background-color: #eee;
+            color: #444;
             padding: 0 10px;
             font-family: 'Merriweather', serif;
+            transition: background-color 0.4s, color 0.4s, font-family 0.4s;
         }
 
         h1,
@@ -33,13 +35,14 @@
         }
 
         *::selection {
-            background-color: #ffaa00;
+            background-color: #fa0;
         }
 
         a {
             text-decoration: none;
             position: relative;
-            color: #7287fd;
+            color: #f70;
+            transition: color 0.4s;
         }
 
         a:after {
@@ -48,7 +51,7 @@
             bottom: 0;
             left: 0;
             width: 0%;
-            border-bottom: 2px solid #7287fd;
+            border-bottom: 2px solid;
             transition: 0.4s;
         }
 
@@ -61,7 +64,7 @@
 <body>
     <header>
         <h1>orangc's improved website.</h1>
-        <aside>Inspired by <a href="http://bettermotherfuckingwebsite.com/">this</a>.</aside>
+        <aside><a id="mocha-toggle">Toggle dark/light mode</a>.</aside>
     </header>
     <section>
         <p>
@@ -110,6 +113,32 @@
             </li>
         </ul>
     </section>
+
+    <script>
+        document.getElementById("mocha-toggle").addEventListener("click", function (event) {
+            event.preventDefault();
+            var body = document.body;
+            var links = document.querySelectorAll("a");
+
+            if (body.style.backgroundColor === "rgb(30, 30, 46)") {
+                // Switch to light mode
+                body.style.backgroundColor = "#eee";
+                body.style.color = "#444";
+                body.style.fontFamily = "'Merriweather', serif";
+                links.forEach(function (link) {
+                    link.style.color = "#f70";
+                });
+            } else {
+                // Switch to dark mode
+                body.style.backgroundColor = "#1e1e2e";
+                body.style.color = "#cdd6f4";
+                body.style.fontFamily = "'Poppins', sans-serif";
+                links.forEach(function (link) {
+                    link.style.color = "#fab387";
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
