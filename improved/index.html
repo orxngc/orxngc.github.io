@@ -7,64 +7,32 @@
     <meta property="og:title" content="orangc" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://orangc.is-a.dev" />
-    <meta property="og:image" content="http://orangc.is-a.dev/leaf.png" />
+    <meta property="og:image" content="../leaf.png" />
     <meta property="og:description" content="orangc's personal homepage. A cozy little corner of the 'net." />
     <meta name="theme-color" content="#FFAA00" />
     <title>orangc</title>
     <link rel="shortcut icon" href="../leaf.ico" type="image/x-icon" />
-    <style type="text/css">
-        @import url(https://fonts.bunny.net/css?family=merriweather:400);
-        @import url(https://fonts.bunny.net/css?family=poppins:400);
-
-        body {
-            margin: 40px auto;
-            max-width: 650px;
-            line-height: 1.6;
-            font-size: 18px;
-            background-color: #eee;
-            color: #444;
-            padding: 0 10px;
-            font-family: 'Merriweather', serif;
-            transition: background-color 0.4s, color 0.4s, font-family 0.4s;
-        }
-
-        h1,
-        h2,
-        h3 {
-            line-height: 1.2;
-        }
-
-        *::selection {
-            background-color: #fa0;
-        }
-
-        a {
-            text-decoration: none;
-            position: relative;
-            color: #f70;
-            transition: color 0.4s;
-        }
-
-        a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0%;
-            border-bottom: 2px solid;
-            transition: 0.4s;
-        }
-
-        a:hover:after {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/streamlined.css">
+    <script defer src="../scripts/dark-mode-toggle.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>orangc's improved website.</h1>
-        <aside><a id="mocha-toggle">Toggle dark/light mode</a>.</aside>
+        <a id="mocha-toggle">
+            <svg id="light-mode-icon" class="w-[36px] h-[36px] text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z"
+                    clip-rule="evenodd" />
+            </svg>
+            <svg id="dark-mode-icon" class="w-[36px] h-[36px] text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                    d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </a>
+        <h1>orangc</h1>
     </header>
     <section>
         <p>
@@ -113,32 +81,6 @@
             </li>
         </ul>
     </section>
-
-    <script>
-        document.getElementById("mocha-toggle").addEventListener("click", function (event) {
-            event.preventDefault();
-            var body = document.body;
-            var links = document.querySelectorAll("a");
-
-            if (body.style.backgroundColor === "rgb(30, 30, 46)") {
-                // Switch to light mode
-                body.style.backgroundColor = "#eee";
-                body.style.color = "#444";
-                body.style.fontFamily = "'Merriweather', serif";
-                links.forEach(function (link) {
-                    link.style.color = "#f70";
-                });
-            } else {
-                // Switch to dark mode
-                body.style.backgroundColor = "#1e1e2e";
-                body.style.color = "#cdd6f4";
-                body.style.fontFamily = "'Poppins', sans-serif";
-                links.forEach(function (link) {
-                    link.style.color = "#fab387";
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>

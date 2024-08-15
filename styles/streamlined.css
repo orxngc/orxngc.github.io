@@ -1,0 +1,95 @@
+@import url(https://fonts.bunny.net/css?family=merriweather:400);
+@import url(https://fonts.bunny.net/css?family=poppins:400);
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 0 10px;
+    transition: background-color 0.4s, color 0.4s, font-family 0.4s;
+}
+
+body.light-mode {
+    background-color: #eee;
+    color: #444;
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    transition: color 0.4s;
+}
+
+a.light-mode {
+    color: #f70;
+}
+
+*::selection {
+    background-color: #fa0;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid;
+    transition: 0.4s;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+body.dark-mode {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: 'Poppins', sans-serif;
+}
+
+a.dark-mode {
+    color: #fab387;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e2e;
+        color: #cdd6f4;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+        color: #fab387;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #eee;
+        color: #444;
+        font-family: 'Merriweather', serif;
+    }
+
+    a {
+        color: #f70;
+    }
+}
+
+#mocha-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    border-bottom: none;
+    color: inherit;
+    font-size: 24px;
+    transition: color 0.4s;
+    cursor: pointer;
+}
+
+#mocha-toggle:hover:after {
+    width: 0%;
+}
