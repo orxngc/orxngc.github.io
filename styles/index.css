@@ -1,5 +1,6 @@
 /* All fonts imports: */
 @import url(https://fonts.bunny.net/css?family=jetbrains-mono:600|martian-mono:400);
+
 /* Make selected text orange */
 *::selection {
     background-color: #ffaa00;
@@ -26,89 +27,104 @@ a:hover:after {
     width: 100%;
 }
 
-html,body {
+html,
+body {
     background-color: #1e1e2e;
 }
+
 .main-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 .card {
-    padding: 1rem; 
+    padding: 1rem;
     border-radius: 25px;
     background-color: #181825;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #cdd6f4;
 }
+
 .social-icons {
-    margin-top: 1rem; /* Add some space between name and social icons */
+    margin-top: 1rem;
+    /* Add some space between name and social icons */
     font-size: 3rem;
 }
+
 .social-icons a {
-    margin-right: 1rem; /* Add space between icons */
-    color: #cdd6f4; 
+    margin-right: 1rem;
+    /* Add space between icons */
+    color: #cdd6f4;
 }
 
-.social-icons a:hover, .social-icons a:after {
-    margin-right: 1rem; /* Add space between icons */
+.social-icons a:hover,
+.social-icons a:after {
+    margin-right: 1rem;
+    /* Add space between icons */
     color: #ffaa00;
 }
 
 #username {
     font-family: 'Martian Mono';
     font-size: clamp(3rem, 8vw, 8rem);
-    color: #ffaa00; 
+    color: #ffaa00;
 }
+
 #username::selection {
     color: #fff;
 }
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .card {
-        padding: 1rem; /* Adjusted padding for smaller screens */
+        padding: 1rem;
+        /* Adjusted padding for smaller screens */
     }
+
     #username {
-        font-size: clamp(2rem, 7vw, 7rem); /* Adjusted font size for smaller screens */
+        font-size: clamp(2rem, 7vw, 7rem);
+        /* Adjusted font size for smaller screens */
     }
 }
 
-    /* Tooltip container */
-    .tooltip {
-        position: relative;
-        display: inline-block;
-      }
-  
-      /* Tooltip text */
-      .tooltip .tooltiptext {
-        visibility: hidden;
-        background-color: #313244;
-        color: #cdd6f4;
-        text-align: center;
-        border-radius: 25px;
-        padding: 5px 10px;
-        position: absolute;
-        z-index: 1;
-        bottom: 100%;
-        left: 0%;
-        opacity: 0;
-        transition: opacity 0.3s;
-        font-size: 1rem;
-      }
-  
-      /* Show the tooltip text when hovering over the tooltip container */
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-      }
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
 
-      .card-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .card {
-        margin-bottom: 20px; /* Add some space between the cards */
-      }
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #313244;
+    color: #cdd6f4;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 0%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1rem;
+}
+
+/* Show the tooltip text when hovering over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    margin-bottom: 20px;
+    /* Add some space between the cards */
+}
