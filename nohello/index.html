@@ -73,10 +73,10 @@
         /* chat stuff */
         .chatbox {
             padding: 1em;
-            background-color: antiquewhite;
+            background-color: #181825;
             border-radius: 1em;
             position: relative;
-            box-shadow: 0 0 10px inset #8883;
+            box-shadow: 0 0 10px inset #1e1e2e;
             max-width: 600px;
             margin: auto;
         }
@@ -86,10 +86,10 @@
             border-radius: 0.5em;
             width: fit-content;
             max-width: 90%;
-            box-shadow: 0.5em 0.5em 1em #8888;
+            box-shadow: 0.5em 0.5em 1em #181825;
             position: relative;
             margin: 1em;
-            color: #111;
+            color: #1e1e2e;
         }
 
         .chat::before {
@@ -101,7 +101,7 @@
         }
 
         .chat.right {
-            background-color: #baffd5;
+            background-color: #a6e3a1;
             margin: 1em 1em 1em auto;
             text-align: right;
             transform-origin: 100% 100%;
@@ -110,11 +110,11 @@
         .chat.right::before {
             right: -1em;
             bottom: 0.3em;
-            border-left: 0.75em solid #baffd5;
+            border-left: 0.75em solid #a6e3a1;
         }
 
         .chat.left {
-            background-color: #c9c9ff;
+            background-color: #89b4fa;
             margin: 1em auto 1em 1em;
             transform-origin: 0% 0%;
         }
@@ -122,14 +122,14 @@
         .chat.left::before {
             left: -1em;
             top: 0.3em;
-            border-right: 0.75em solid #c9c9ff;
+            border-right: 0.75em solid #89b4fa;
         }
 
         .chat .timestamp {
             display: block;
             font-size: 80%;
             font-family: monospace;
-            color: darkslategrey;
+            color: #11111b;
             margin-top: 6px;
         }
 
@@ -147,7 +147,7 @@
         @media (prefers-reduced-motion: no-preference) {
             .animate-in {
                 transform: scale(0);
-                animation: 250ms cubic-bezier(0, 0, 0.25, 1.25) 0s 1 normal forwards running pop-in;
+                animation: 125ms cubic-bezier(0, 0, 0.25, 0.725) 0s 1 normal forwards running pop-in;
             }
 
             .to-animate {
@@ -189,18 +189,34 @@
             }
         }
 
-        /* dark theme */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1e1e2e;
-                color: #cdd6f4;
-            }
+        a {
+            text-decoration: none;
+            position: relative;
+            transition: color 0.4s;
+            color: #fab387;
+        }
 
-            a,
-            a:visited,
-            a:active {
-                color: #fee;
-            }
+        *::selection {
+            background-color: #fa0;
+        }
+
+        a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            border-bottom: 2px solid;
+            transition: 0.4s;
+        }
+
+        a:hover:after {
+            width: 100%;
+        }
+
+        body {
+            background-color: #1e1e2e;
+            color: #cdd6f4;
         }
     </style>
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
