@@ -1,132 +1,150 @@
-/* All fonts imports: */
-@import url(https://fonts.bunny.net/css?family=jetbrains-mono:600|martian-mono:400);
-
-/* Make selected text orange */
-*::selection {
-    background-color: #ffaa00;
-}
-
-/* Setting up cool link underlines */
-a {
-    text-decoration: none;
-    position: relative;
-    color: #ffaa00;
-}
-
-a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    border-bottom: 2px solid #ff9900;
-    transition: 0.4s;
-}
-
-a:hover:after {
-    width: 100%;
-}
-
-html,
+/* General */
+@import url(https://fonts.bunny.net/css?family=raleway:400);
 body {
-    background-color: #1e1e2e;
-    height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.main-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    max-height: 100%
+::selection {
+  background-color: #ffaa00;
+}
+a::selection {
+  color: #1e1e2e;
 }
 
+/* Main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Card */
 .card {
-    padding: 1rem;
-    border-radius: 25px;
-    background-color: #181825;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: #cdd6f4;
+  background-color: #181825;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(17, 17, 27, 20);
+  padding: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.social-icons {
-    margin-top: 1rem;
-    /* Add some space between name and social icons */
-    font-size: 3rem;
-}
-
-.social-icons a {
-    margin-right: 1rem;
-    /* Add space between icons */
-    color: #cdd6f4;
-}
-
-.social-icons a:hover,
-.social-icons a:after {
-    margin-right: 1rem;
-    /* Add space between icons */
-    color: #ffaa00;
-}
-
+/* Header */
 #username {
-    font-family: 'Martian Mono';
-    font-size: clamp(3rem, 8vw, 8rem);
-    color: #ffaa00;
+  font-size: 3rem;
+  color: #ffaa00;
+  text-align: center;
+  margin-bottom: 20px;
+  user-select: none;
 }
 
-#username::selection {
-    color: #fff;
+/* Social links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #ffaa00;
+  font-size: 2rem;
+  text-decoration: none;
+  user-select: none;
+  margin: 5px;
+}
+
+.social-links i {
+  color: #cdd6f4;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #313244;
+  color: #cdd6f4;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Article */
+article {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #cdd6f4;
+  text-align: center;
+}
+
+article {
+  vertical-align: middle;
+  margin: 0 3px;
+}
+
+article a {
+  color: #ffaa00;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.4s, color 0.4s;
+}
+
+article a:hover {
+  color: #ffaa00;
+  border-bottom: 2px solid #ff9900;
+}
+
+ul {
+  text-align: left;
+}
+
+/* Discord status */
+#discord-status {
+  display: block;
+  margin: 20px auto; /* Center the image horizontally */
+  max-width: 100%;
+  height: auto;
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .card {
-        padding: 1rem;
-        /* Adjusted padding for smaller screens */
-    }
+@media (min-width: 768px) {
+  .card {
+    padding: 40px;
+  }
 
-    #username {
-        font-size: clamp(2rem, 7vw, 7rem);
-        /* Adjusted font size for smaller screens */
-    }
-}
+  #username {
+    font-size: 3rem;
+  }
 
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    background-color: #313244;
-    color: #cdd6f4;
-    text-align: center;
-    border-radius: 25px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 0%;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 1rem;
-}
-
-/* Show the tooltip text when hovering over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card {
-    margin-bottom: 20px;
-    /* Add some space between the cards */
+  .social-links a {
+    margin: 0 10px;
+  }
 }
