@@ -30,6 +30,7 @@ a:hover:after {
 html,
 body {
     background-color: #1e1e2e;
+    height: 100vh;
 }
 
 .main-section {
@@ -37,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-height: 100%
 }
 
 .card {
