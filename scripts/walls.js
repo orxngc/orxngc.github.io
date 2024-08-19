@@ -104,6 +104,13 @@ window.addEventListener('click', function (event) {
     }
 });
 
+// Close the carousel if the escape key is pressed
+window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeCarousel();
+    }
+});
+
 // Initial setup
 fetchImages();
 updateHeaderAndAside();

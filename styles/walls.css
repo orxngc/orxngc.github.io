@@ -177,3 +177,7 @@ a:hover:after {
     width: 100%;
 }
 
+div.carousel > a, div.carousel > a:hover, div.carousel > a:after {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
