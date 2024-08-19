@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="orangc" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://orangc.is-a.dev" />
     <meta property="og:image" content="http://orangc.is-a.dev/leaf.png" />
-    <meta property="og:description" content="orangc's personal homepage. A cozy little corner of the 'net." />
+    <meta property="og:description" content="orangc's collection of wallpapers." />
     <meta name="theme-color" content="#FFAA00" />
 
-    <meta http-equiv="refresh" content="0; url=https://www.github.com/orxngc/walls">
-    <link rel="stylesheet" href="styles/streamlined.css">
+    <!-- Title and Favicon -->
+    <title>orangc</title>
+    <link rel="shortcut icon" href="leaf.ico" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/walls.css" />
 </head>
+
 <body>
-    <p>If you are not redirected automatically, <a href="https://www.github.com/orxngc/walls">click here</a>.</p>
+    <header>
+        <h1><a href="https://github.com/orxngc/walls" id="repo-link">orxngc/walls</a></h1>
+        <button id="repo-toggle">Switch to catppuccin-mocha repository</button>
+        <aside id="repo-info">
+            <p>
+                Yoh! This is my repository of wallpapers which I've collected over the years. A <a
+                    href="http://github.com/orxngc/walls-catppuccin-mocha">catppuccin-mocha</a>
+                version is available here.
+            </p>
+            <p>
+                <br>
+                Disclaimer: These wallpapers are sourced from many, many, many sources on the internet. I did not make
+                any of these, although I have edited several of them a little bit. No credit really goes to me in that
+                regard, I'm just the collector.
+            </p>
+            <p>
+                Please <a href="http://github.com/orxngc/walls">star</a> the repository on Github if
+                you like these.
+            </p>
+        </aside>
+    </header>
+
+    <main class="gallery-container" id="gallery">
+        <!-- Images will be loaded here by the script -->
+    </main>
+
+    <div id="carousel" class="carousel">
+        <span class="close">&times;</span>
+        <img class="carousel-content" id="carousel-image">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <!-- JS -->
+    <script src="../scripts/walls.js"></script>
 </body>
+
 </html>
