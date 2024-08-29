@@ -1,4 +1,4 @@
-@import url('https://fonts.bunny.net/css?family=raleway:400');
+@import url("https://fonts.bunny.net/css?family=raleway:400");
 
 body {
   font-family: "Raleway", sans-serif;
@@ -127,7 +127,7 @@ button#repo-toggle:hover {
   h1 {
     font-size: 1.5rem;
   }
-  
+
   .gallery-container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
@@ -135,49 +135,51 @@ button#repo-toggle:hover {
 }
 
 header {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 aside {
-    font-size: 1.1rem;
-    color: #cdd6f4;
-    max-width: 600px;
-    margin: 20px auto;
-    line-height: 1.6;
-    text-align: left;
+  font-size: 1.1rem;
+  color: #cdd6f4;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+  text-align: left;
 }
 
 aside p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 a {
-    text-decoration: none;
-    position: relative;
-    transition: color 0.4s;
-    color: #fab387;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.4s;
+  color: #fab387;
 }
 
 *::selection {
-    background-color: #fa0;
+  background-color: #fa0;
 }
 
 a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    border-bottom: 2px solid;
-    transition: 0.4s;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid;
+  transition: 0.4s;
 }
 
 a:hover:after {
-    width: 100%;
+  width: 100%;
 }
 
-div.carousel > a, div.carousel > a:hover, div.carousel > a:after {
+div.carousel > a,
+div.carousel > a:hover,
+div.carousel > a:after {
   text-decoration: none !important;
   border-bottom: none !important;
 }
