@@ -24,12 +24,12 @@ a::selection {
 /* Main content */
 .main-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     /* Space between cards */
     width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    max-width: 1500px;
+    padding: 10px;
     box-sizing: border-box;
     align-items: start;
     /* Align cards to the top of the grid row */
@@ -76,75 +76,6 @@ a::selection {
     box-sizing: border-box;
 }
 
-/* Header */
-#username {
-    font-size: 3rem;
-    color: #74c7ec;
-    text-align: center;
-    margin-bottom: 20px;
-    user-select: none;
-}
-
-/* Social links */
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.social-links a {
-    color: #74c7ec;
-    font-size: 2rem;
-    text-decoration: none;
-    user-select: none;
-    margin: 5px;
-}
-
-.social-links i {
-    color: #cdd6f4;
-}
-
-/* Tooltip */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    background-color: #313244;
-    color: #cdd6f4;
-    text-align: center;
-    border-radius: 10px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.9rem;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Article */
-article {
-    font-size: 1.15rem;
-    line-height: 1.5;
-    color: #cdd6f4;
-    text-align: center;
-}
-
-article {
-    vertical-align: middle;
-    margin: 0 3px;
-}
 
 a {
     color: #a6e3a1;
@@ -160,15 +91,6 @@ a:hover {
 
 ul {
     text-align: left;
-}
-
-/* Discord status */
-#discord-status {
-    display: block;
-    margin: 20px auto;
-    /* Center the image horizontally */
-    max-width: 100%;
-    height: auto;
 }
 
 /* Responsive adjustments */
@@ -192,4 +114,15 @@ strong {
 
 span {
     color: #cba6f7;
+}
+
+h3 {
+    color: #bac2de;
+    font-size: 0.8rem;
+}
+
+aside {
+    color: #a6adc8;
+    font-size: 0.75rem;
+    padding-bottom: 0.5vh;
 }
