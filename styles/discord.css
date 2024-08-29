@@ -28,7 +28,7 @@ a::selection {
     gap: 20px;
     /* Space between cards */
     width: 100%;
-    max-width: 1500px;
+    max-width: 1550px;
     padding: 10px;
     box-sizing: border-box;
     align-items: start;
