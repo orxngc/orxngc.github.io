@@ -23,8 +23,7 @@ a::selection {
 
 /* Main content */
 .main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 20px;
     width: 100%;
     max-width: 1550px;
@@ -42,6 +41,7 @@ a::selection {
     box-sizing: border-box;
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
 }
 
 .card:hover {
@@ -49,56 +49,22 @@ a::selection {
     box-shadow: 0 8px 15px rgba(17, 17, 27, 0.4);
 }
 
-.card h2 {
-    font-size: 1.3rem;
-}
-
-.card img {
+.card iframe {
     width: 100%;
     height: auto;
-    display: block;
+    aspect-ratio: 16 / 9;
+    border: none;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-/* Content within the card */
-.card-content {
-    padding: 10px;
-    box-sizing: border-box;
-}
+@media (max-width: 600px) {
+    .card {
+        padding: 5px;
+    }
 
-
-a {
-    color: #a6e3a1;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.4s, color 0.4s;
-}
-
-a:hover {
-    color: #a6e3a1;
-    border-bottom: 2px solid #a6e3a1;
-}
-
-ul {
-    text-align: left;
-}
-
-strong {
-    color: #fab387;
-}
-
-span {
-    color: #cba6f7;
-}
-
-h3 {
-    color: #bac2de;
-    font-size: 0.8rem;
-}
-
-aside {
-    color: #a6adc8;
-    font-size: 0.75rem;
-    padding-bottom: 0.5vh;
+    .card iframe {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: auto;
+    }
 }

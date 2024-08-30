@@ -129,7 +129,7 @@ ul {
 /* Discord status */
 #discord-status {
   display: block;
-  margin: 20px auto; /* Center the image horizontally */
+  margin: 20px auto;
   max-width: 100%;
   height: auto;
 }
