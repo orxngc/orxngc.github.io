@@ -2,24 +2,171 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="orangc" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://orangc.is-a.dev" />
-    <meta property="og:image" content="http://orangc.is-a.dev/leaf.png" />
-    <meta property="og:description" content="My dotfiles — yet another NixOS + Hyprland setup." />
-    <meta name="theme-color" content="#FFAA00" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="orangc" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://orangc.is-a.dev" />
+  <meta property="og:image" content="http://orangc.is-a.dev/leaf.png" />
+  <meta property="og:description" content="orangc's dotfiles — yet another NixOS + Hyprland flake, catppuccin flavoured." />
+  <meta name="theme-color" content="#FFAA00" />
 
-    <meta http-equiv="refresh" content="0; url=https://www.github.com/orxngc/dots">
-    <link rel="stylesheet" href="../styles/streamlined.css">
+  <title>orangc</title>
+  <link rel="shortcut icon" href="../leaf.ico" type="image/x-icon" />
+
+  <script src="https://kit.fontawesome.com/c67ad27611.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles/uwu.css" />
+  <style>li a { border: none !important;} code, li { margin: .3rem; }</style>
 </head>
 
-<body>
-    <p>If you are not redirected automatically, <a href="https://www.github.com/orxngc/dots">click here</a>.</p>
+<body class="u-paper">
+    <h1 id="orangc-s-flake">orangc&#39;s flake</h1>
+    <p>A smol (<em>not really small; excluding my home folder it is 44GB, I&#39;m trying to reduce this</em>) n&#39; cozy NixOS with Hyprland flake.</p>
+    <h2 id="screenshots">Screenshots</h2>
+    <details> 
+    <summary>Rofi</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/bindings.png" alt="Bindings">
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/application-launcher.png" alt="Application launcher">
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/wallpaper-selector.png" alt="Wallpaper selector">
+    </details>
+    
+    <details>
+    <summary>Hyprlock</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/lockscreen-1.png" alt="Lockscreen 1">
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/lockscreen-2.png" alt="Lockscreen 2">
+    </details>
+    
+    <details> 
+    <summary>Minecraft launcher</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/minecraft-launcher.png" alt="Minecraft launcher">
+    </details>
+    
+    <details> 
+    <summary>ags &amp; thunar</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/ags-thunar.png" alt="ags-thunar">
+    </details>
+    
+    <details> 
+    <summary>Discord</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/discord.png" alt="Discord">
+    </details>
+    
+    <details> 
+    <summary>nvim</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/nvim.png" alt="nvim">
+    </details>
+    
+    <details> 
+    <summary>wlogout</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/wlogout.png" alt="wlogout">
+    </details>
+    
+    <details> 
+    <summary>firefox &amp; nighttab</summary>
+    
+    <img src="https://raw.githubusercontent.com/orxngc/dots/main/.github/firefox.png" alt="firefox">
+    </details>
+    
+    <h2 id="installation">Installation</h2>
+    <p>Run this command in your terminal and the script will handle the rest. Note that this won&#39;t work for non NixOS users. If the script breaks in anyway, please make an issue and notify me. It shouldn&#39;t, though.</p>
+    <pre><code class="lang-sh">nix-<span class="hljs-keyword">shell</span> -<span class="hljs-keyword">p</span> curl # You can skip <span class="hljs-keyword">to</span> the <span class="hljs-keyword">next</span> <span class="hljs-built_in">line</span> <span class="hljs-keyword">if</span> you already have curl installed.
+    <span class="hljs-keyword">sh</span> &lt;(curl -L http<span class="hljs-variable">s:</span>//raw.githubusercontent.<span class="hljs-keyword">com</span>/orxngc/dots/main/install.<span class="hljs-keyword">sh</span>)
+    </code></pre>
+    <p>Note: I strongly advise you to read the code of the script <a href="github.com/orxngc/dots/blob/main/install.sh">here</a> before running it. Always read and thoroughly check scripts you see online for your own safety..!</p>
+    <p>Press <code>SUPER + ?</code> to open a list of all keybindings.</p>
+    <h2 id="structure-overview">Structure Overview</h2>
+    <p>This is a very modular flake.</p>
+    <ul>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/.github"><code>.github</code></a> The assets files for the README.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/files"><code>files</code></a> Files which various home-manager modules utilize.<ul>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/files/fonts"><code>fonts</code></a> This is where you can place fonts that are not available in nixpkgs.</li>
+    </ul>
+    </li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/hm-modules"><code>hm-modules</code></a> All home-manager modules are stored in here.<ul>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/hm-modules/core"><code>core</code></a> Important things, like the hyprland module.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/hm-modules/programs"><code>programs</code></a> The majority of program modules.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/hm-modules/styles"><code>styles</code></a> Now this one you should touch. A big chunk of the system is themed here (the rest are themed in hm-modules/programs).</li>
+    </ul>
+    </li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/hosts"><code>hosts</code></a> This is where each host&#39;s unique configurations go. You can configure/toggle the different modules and hm-modules for each host here.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/modules"><code>modules</code></a> NixOS system modules.<ul>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/modules/core"><code>core</code></a> There&#39;s no reason to touch this.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/modules/core"><code>drivers</code></a> Again, no reason to touch these.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/modules/programs"><code>programs</code></a> Honestly not a reason to touch these either.</li>
+    </ul>
+    </li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/scripts"><code>scripts</code></a> This is where I store all my scripts.</li>
+    <li><a href="https://raw.githubusercontent.com/orxngc/dots/main/flake.nix"><code>flake.nix</code></a> Where the flake begins, the lovely starting pont.</li>
+    </ul>
+    <h2 id="programs">Programs</h2>
+    <details>
+        <summary>Here&#39;s a list of some of the programs you&#39;ll find used here.</summary>
+        <ul>
+            <li><code>hyprland</code></li>
+            <li><code>rofi</code></li>
+            <li><code>neovim</code></li>
+            <li><code>vscodium</code></li>
+            <li><code>thunar</code></li>
+            <li><code>kitty</code></li>
+            <li><code>ags</code></li>
+            <li><code>firefox</code></li>
+            <li><code>hyprlock</code></li>
+        </ul>
+    </details>
+    
+    <h2 id="todo">Todo</h2>
+    <details> 
+        <summary>Completed</summary>
+        <ul>
+            <li><del>Write an installation script.</del></li>
+            <li><del>Create a rofi wallpaper selector thing.</del></li>
+            <li><del>Make swaync notifications pretty.</del></li>
+            <li><del>Make those annoying folders in $HOME disappear, they aren&#39;t welcome.</del></li>
+            <li><del>Add something that lists all the keybindings.</del></li>
+            <li><del>Move back to SDDM or some other DM because I want something pretty.</del></li>
+            <li><del>Update README screenshots.</del></li>
+            <li><del>Make a screen recording script with wf-recorder.</del></li>
+            <li><del>Cleanup/optimize the flake — try to make it take up less disk space.</del></li>
+            <li><del>Make both browsers declarative.</del></li>
+            <li><del>Fix the installation script.</del></li>
+            <li><del>Fix MIME types.</del></li>
+            <li><del>Restructure the flake and make it modular.</del></li>
+            <li><del>Make Vencord fully declarative.</del></li>
+            <li><del>Use the VScodium home-manager module to its fullest extent.</del></li>
+            <li><del>Make Hyprpanel fully declarative; also maybe make a PR that adds home-manager options to that flake.</del></li>
+            <li><del>Switch to standalone home-manager.</del></li>
+        </ul>
+        <hr>
+    </details>
+    
+    <ul>
+        <li>Implement impermanence. It seems pretty nice.</li>
+        <li>Make Stylix theme 100% of everything, not 80%.</li>
+        <li>Figure out a way to make Firefox extension <em>data</em> declarative. I&#39;ve already made installing extensions declarative.</li>
+        <li>Figure out how to deal with secrets.</li>
+        <li>Make the flake more.. nixy. This is, I&#39;d say, 70% done. I still have things to do like make my Hyprland config use the home-manager module in a nixy sort of way.</li>
+    </ul>
+    <h2 id="last-but-not-least-credits-">Last but not least, credits!</h2>
+    <details>
+    <summary>Thank you!</summary>
+    <ul>
+        <li>the vimjoyer youtube channel, for making immensely helpful videos that saved me hours and hours of pain</li>
+        <li><a href="https://github.com/NotAShelf/nyx/">https://github.com/NotAShelf/nyx/</a> — teaching me how many different parts of how nix works, and many tidbits of code</li>
+        <li><a href="https://gitlab.com/Zaney/zaneyos">https://gitlab.com/Zaney/zaneyos</a> — teaching me how many different parts of how nix works, and several tidbits of code</li>
+        <li><a href="https://github.com/Jas-SinghFSU/HyprPanel">https://github.com/Jas-SinghFSU/HyprPanel</a> — The ags configuration that I use.</li>
+        <li><a href="https://github.com/MrVivekRajan/Hypr-Dots">https://github.com/MrVivekRajan/Hypr-Dots</a> — The hyprlock config inspiration.</li>
+        <li><a href="https://github.com/zDyanTB/HyprNova">https://github.com/zDyanTB/HyprNova</a> <li>The wlogout styling.</li></li>
+        <li><a href="https://github.com/elythh/nixvim">https://github.com/elythh/nixvim</a> — The neovim configuration I use.</li>
+    </ul>
+    </details>
+    
 </body>
 
 </html>
