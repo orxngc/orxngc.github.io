@@ -61,13 +61,6 @@ a::selection {
     margin-bottom: 10px;
 }
 
-/* Content within the card */
-.card-content {
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-
 a {
     color: #a6e3a1;
     text-decoration: none;
