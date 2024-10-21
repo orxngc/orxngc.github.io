@@ -12,10 +12,9 @@
     <meta property="og:description" content="orangc's personal homepage. A cozy little corner of the 'net." />
     <meta name="theme-color" content="#FFAA00" />
 
-    <title>orangc</title>
+    <title>Takina</title>
     <link rel="shortcut icon" href="takina.ico" type="image/x-icon" />
 
-    <script src="https://kit.fontawesome.com/c67ad27611.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/uwu.css" />
     <style>
         #avatar-container {
@@ -28,119 +27,77 @@
 
 <body>
     <section class="u-paper">
-        <div id="avatar-container"><img
+        <div id="avatar-container" class="u-ns"><img
                 src="https://cdn.discordapp.com/avatars/1287074090783604797/74b52e03b8de639d95262a885b94ae98.webp"
                 alt="" id="avatar"></div>
 
-        <article>
-            <!DOCTYPE html>
-            <html lang="en">
+        <header>
+            <h1><a href="https://github.com/orxngc/takina">Takina</a></h1>
+            <i><aside class="text-small" style="color: var(--subtext0)">Fun fact: Takina is named after <a href="https://myanimelist.net/character/204620/Takina_Inoue">Takina Inoue</a> from <a href="https://myanimelist.net/anime/50709/Lycoris_Recoil">Lycoris Recoil</a>.</aside></i>
+            <p>A simple multipurpose bot for Discord written in Python with the Nextcord library.</p>
+        </header>
 
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet"
-                    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-                <style>
-                    body {
-                        font-family: 'Raleway', sans-serif;
-                        background-color: #1E1E2F;
-                        color: #D9E0EE;
-                        margin: 0;
-                        padding: 20px;
-                    }
+        <h2 style="color: var(--pink)">Weeb Utilities</h2>
+        <i><aside class="text-small" style="color: var(--subtext0)">Takina uses the <a href="https://jikan.moe/"> Jikan</a> API for this module.</aside></i>
+        <ul>
+            <li>anime searching — <code>?anime Lycoris Recoil</code></li>
+            <li>manga searching — <code>?manga Lycoris Recoil</code></li>
+            <li>character searching — <code>?chr Takina Inoue</code></li>
+            <li>myanimelist user profiles — <code>?mal orangc</code></li>
+            <li>seasonal anime — <code>?season Summer 2022</code></li>
+        </ul>
 
-                    h1,
-                    h2,
-                    h3 {
-                        color: #F5C2E7;
-                    }
+        <h2 style="color: var(--yellow)">Fun</h2>
+        <ul>
+            <li>random fact fetching command</li>
+            <li>random joke command</li>
+            <li>user avatar fetching command</li>
+            <li>neko commands (hug, shrug, bonk, yeet, etc.)</li>
+            <i><aside class="text-small" style="color: var(--subtext0)">Takina uses the <a href="https://nekos.best/"> nekos.best</a> API for the neko commands.</aside></i>
+            <li>google command</li>
+            <li>roll command</li>
+            <li>topic command (from yagpdb)</li>
+            <li>urban dictionary searching command</li>
+            <li>8ball command</li>
+        </ul>
 
-                    a {
-                        color: #F9E2AE;
-                    }
+        <h2 style="color: var(--mauve)">Listeners</h2>
+        <ul>
+            <li>GitHub module (sends embeds for repo/pull request/issue links)</li>
+            <li>Starboard module</li>
+        </ul>
 
-                    .section {
-                        margin-bottom: 20px;
-                        padding: 15px;
-                        background-color: #26233A;
-                        border-radius: 8px;
-                    }
+        <h2 style="color: var(--red)">Moderation</h2>
+        <ul>
+            <li>Reports system</li>
+            <li>ban/unban commands</li>
+            <li>mute/unmute commands</li>
+            <li>kick command</li>
+            <li>nickname changing command</li>
+            <li>message purging command</li>
+            <li>send command (sends messages as Takina)</li>
+            <li>logging and casing system</li>
+        </ul>
 
-                    footer {
-                        text-align: center;
-                        margin-top: 40px;
-                        font-size: 0.9em;
-                    }
-                </style>
-                <title>Takina Bot</title>
-            </head>
-
-            <body>
-
-                <header>
-                    <h1>Takina</h1>
-                    <p>A simple multipurpose bot for Discord.</p>
-                    <p>Takina is under heavy development; so far, we have the following features:</p>
-                </header>
-
-                <h2>Weeb Utilities</h2>
-                <p>Takina utilizes the Jikan API for this module.</p>
-                <ul>
-                    <li>anime searching — <code>?anime Lycoris Recoil</code></li>
-                    <li>manga searching — <code>?manga Lycoris Recoil</code></li>
-                    <li>character searching — <code>?chr Takina Inoue</code></li>
-                    <li>myanimelist user profiles — <code>?mal orangc</code></li>
-                    <li>seasonal anime — <code>?season Summer 2022</code></li>
-                </ul>
-
-                <h2>Fun</h2>
-                <ul>
-                    <li>random fact fetching command</li>
-                    <li>random joke command</li>
-                    <li>user avatar fetching command</li>
-                    <li>neko commands (hug, shrug, bonk, yeet, etc.)</li>
-                    <li>google command</li>
-                    <li>roll command</li>
-                    <li>topic command (from yagpdb)</li>
-                    <li>urban dictionary searching command</li>
-                    <li>8ball command</li>
-                </ul>
-
-                <h2>Listeners</h2>
-                <ul>
-                    <li>GitHub module (sends embeds for repo/pull request/issue links)</li>
-                    <li>Starboard module</li>
-                </ul>
-
-                <h2>Moderation</h2>
-                <ul>
-                    <li>WIP reports system</li>
-                    <li>ban/unban commands</li>
-                    <li>mute/unmute commands</li>
-                    <li>kick command</li>
-                    <li>nickname changing command</li>
-                    <li>message purging command</li>
-                    <li>send command (sends messages as Takina)</li>
-                    <li>logging and casing system</li>
-                </ul>
-
-                <ul>
-                    <li>embed builder command</li>
-                    <li>remindme module (e.g., <code>remindme 10m watch lycoris recoil</code>)</li>
-                    <li>role management commands (e.g., <code>role add weeb orangc</code>)</li>
-                    <li>channel management commands (slowmode, lock, unlock)</li>
-                    <li>info commands (userinfo, serverinfo, roleinfo)</li>
-                    <li>snipe command</li>
-                    <li>guild member count and user join position commands</li>
-                </ul>
-                <h2>Minecraft Things</h2>
-                <ul>
-                    <li><code>mcstatus mc.orangc.xyz</code> fetches the status of a Minecraft server</li>
-                </ul>
+        <h2 style="color: var(--blue)">Utility</h2>
+        <ul>
+            <li>embed builder command</li>
+            <li>remindme module (e.g., <code>remindme 10m watch lycoris recoil</code>)</li>
+            <li>role management commands (e.g., <code>role add weeb orangc</code>)</li>
+            <li>channel management commands (slowmode, lock, unlock)</li>
+            <li>info commands (userinfo, serverinfo, roleinfo)</li>
+            <li>snipe command</li>
+            <li>guild member count and user join position commands</li>
+        </ul>
+        <h2 style="color: var(--green)">Minecraft Things</h2>
+        <ul>
+            <li><code>mcstatus mc.orangc.xyz</code> fetches the status of a Minecraft server</li>
+        </ul>
 
         </article>
-        <footer>Copyright <a href="https://orangc.xyz">orangc</a> 2024 — Present.</footer>
+        <br>
+        <footer><a href="https://raw.githubusercontent.com/orxngc/takina/refs/heads/main/LICENSE">Copyright</a> <a
+                href="https://orangc.xyz">@orangc</a> 2024 — Present.</footer>
     </section>
 
 </body>
