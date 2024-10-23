@@ -11,23 +11,38 @@
   <meta property="og:image" content="http://orangc.is-a.dev/leaf.png" />
   <meta property="og:description" content="orangc's personal homepage. A cozy little corner of the 'net." />
   <meta name="theme-color" content="#FFAA00" />
-
   <title>orangc</title>
-  <link rel="shortcut icon" href="leaf.ico" type="image/x-icon" />
 
+  <link rel="shortcut icon" href="leaf.ico" type="image/x-icon" />
   <script src="https://kit.fontawesome.com/c67ad27611.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/uwu.css" />
+
   <style>
-        a { color: #fa0; }
-        a:hover { color: #fa0; border-bottom: 2px solid #f90; }
-        #username { color: #ffaa00; }
+    /* Social Links
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .social-links a {
+        font-size: 2rem;
+        text-decoration: none;
+        margin: 4px;
+    }
+
+    .social-links i {
+        color: var(--subtext1);
+    }
   </style>
 </head>
 
-<body>
-    <section class="card u-paper">
-      <header class="u-ns">
-        <h1 data-value="orangc" id="username">orangc</h1>
+<body class="grid-container">
+  <!-- Social Link -->
+    <section class="card u-ns">
+        <h1 data-value="orangc" id="username" class="ug-peach">orangc</h1>
         <!-- Social Links -->
         <nav class="social-links">
           <!-- Discord -->
@@ -55,7 +70,7 @@
           <a href="https://www.backloggd.com/u/orangc/" class="tooltip"><i class="fa-solid fa-gamepad"></i><span
               class="tooltiptext">Backloggd</span></a>
           <!-- Twitch -->
-          <a href="https://www.twitch.tv/i0rangish" class="tooltip"><i class="fab fa-twitch"></i><span
+          <a href="https://www.twitch.tv/orangci" class="tooltip"><i class="fab fa-twitch"></i><span
               class="tooltiptext">Twitch</span></a>
           <!-- Matrix -->
           <a href="https://matrix.org" class="tooltip"><i class="fa-solid fa-m"></i><span class="tooltiptext">Matrix:
@@ -63,38 +78,50 @@
           <!-- Mastodon -->
           <a href="https://mastodon.social/@orangc" class="tooltip"><i class="fab fa-mastodon"></i><span
               class="tooltiptext">Mastodon</span></a>
+          <!-- Bluesky -->
+          <a href="https://bsky.app/profile/orangc.xyz" class="tooltip"><i class="fa-brands fa-bluesky"></i><span
+            class="tooltiptext">Bluesky</span></a>
         </nav>
-      </header>
-
-      <!-- About me  -->
-      <article class="about-me">
+    </section>
+  
+    <!-- About Me -->
+    <section class="card">
+      <article>
+        <h2 class="ug-blue">about</h2>
         <p>
-          Hi friends.
-          <img src="https://cdn.discordapp.com/emojis/1199591591044726825.webp?size=20&quality=lossless" alt="emoji" />
-          I'm a student doode based in Riyadh. I tinker with code a great deal.
-          <a href="nohello">Feel free to message me anytime</a>, but note that I'm not the fastest when it comes to
-          replies. I respond fastest on Discord, email, and Github. I use NixOS btw <img src="https://cdn.discordapp.com/emojis/1281979646602252372.webp?size=20&quality=lossless" alt="emoji" />
+          Hi friends. <img src="https://cdn.discordapp.com/emojis/1199591591044726825.webp?size=20&quality=lossless" alt="emoji" /> I'm a student doode based in Riyadh. I tinker with code a great deal. <a href="nohello" class="link ug-peach">Feel free to message me anytime</a>, but note that I'm not the fastest when it comes to replies. I respond fastest on Discord, email, and Github. I use NixOS btw <img src="https://cdn.discordapp.com/emojis/1281979646602252372.webp?size=20&quality=lossless" alt="emoji" />
         </p>
       </article>
     </section>
-    <!-- Terribly interesting things -->
-    <section class="card u-paper">
+
+    <!-- Projects -->
+    <section class="card">
       <article>
-        <h2 class="heading-small">some interesting things</h2>
+        <h2 class="ug-green">projects</h2>
         <ul>
-          <li><a href="https://github.com/orxngc/dots">my NixOS + Hyprland flake</li>
-          <li>the <a href="./discord">list</a> of places I'm staff in <img src="https://cdn.discordapp.com/emojis/1282269301826654289.webp?size=20&quality=lossless" alt="emoji" /></a></li>
-          <li>my discord bot, <a href="./takina">takina</a>, written in python with nextcord <img src="https://cdn.discordapp.com/emojis/1284397873366040663.webp?size=20&quality=lossless" alt="emoji" /></li>
-          <li>my repository of <a href="walls">wallpapers</a> (click the button to make them catppuccin)</li>
+          <li><a href="./takina" class="link ug-peach">takina</a>, a discord bot written in python with nextcord</li>
+          <li>my NixOS + Hyprland <a href="https://github.com/orxngc/dots" class="link ug-peach">flake</a></li>
+          <li>my repository of <a href="https://github.com/orxngc/walls" class="link ug-peach">wallpapers</a> with its <a href="https://github.com/orxngc/walls-catppuccin-mocha" class="link ug-peach">catppuccin version</a></li>
+          <li>the <a href="https://wiki.nixos.org" class="link ug-mauve">nixos wiki</a> <a href="https://catppuccin.com" class="link ug-pink">catppuccin</a> <a href="https://github.com/catppuccin/userstyles/tree/main/styles/wiki.nixos.org" class="link ug-peach">userstyle</a></li>
         </ul>
       </article>
     </section>
 
-    <section class="card u-paper">
-      <h2 class="heading-small"><a href="https://nixwebr.ing/prev/orangc">«</a> <a href="http://nixwebr.ing">nixwebring</a> <a href="http://nixwebr.ing/rand">🎲</a> <a href="https://nixwebr.ing/next/orangc">»</a></h2>
+    <!-- Communities -->
+    <section class="card">
+      <article>
+        <h2 class="ug-red">communities</h2>
+        for a list of the communities i am staff in visit this <a href="./discord" class="link ug-peach">page</a>
+      </article>
     </section>
+
     <!-- Discord status -->
-    <section class="card u-paper"> <img src="https://lanyard.cnrad.dev/api/961063229168164864?bg=181825" alt="Discord status." style="display: block; margin: 20px auto; max-width: 100%; height: auto;" /></section>
+    <section class="card"> <img src="https://lanyard.cnrad.dev/api/961063229168164864?bg=181825" alt="Discord status." style="display: block; margin: 20px auto; max-width: 100%; height: auto;" /></section>
+  
+    <!-- nixwebring -->
+    <section class="card">
+      <h2><a href="https://nixwebr.ing/prev/orangc" class="ug-sky">«</a> <a href="http://nixwebr.ing" class="link ug-sky">nixwebring</a> <a href="http://nixwebr.ing/rand">🎲</a> <a href="https://nixwebr.ing/next/orangc" class="ug-sky">»</a></h2>
+    </section>
 
   <!-- External JS -->
   <script src="scripts/mainPageTitle.js"></script>

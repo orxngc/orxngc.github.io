@@ -1,5 +1,6 @@
 /* orangc's catppuccin CSS framework */
 @import url(https://fonts.bunny.net/css?family=raleway:400);
+@import url(./gradients.css);
 :root {
     --rosewater: #f5e0dc;
     --flamingo: #f2cdcd;
@@ -30,16 +31,30 @@
 }
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.grid-container {
+/* .grid-container {
 	position: relative;
-	max-width: 960px;
+	max-width: 1640px;
 	margin: 0 auto;
 	padding: 20px;
 	text-align: center;
 	display: grid;
 	grid-gap: 20px;
 	gap: 20px;	
-	grid-template-columns: minmax(200px, 1fr); /* by default use min 200px wide columns auto-fit into width */
+	grid-template-columns: minmax(200px, 1fr); by default use min 200px wide columns auto-fit into width 
+} */
+
+.grid-container {
+  position: relative;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  box-sizing: border-box;
+  align-items: start;
 }
 
 /* grids to 3 columns above mobile sizes */
@@ -96,15 +111,29 @@ h6 { font-size: 1.25rem; margin: 0.1rem; }
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-    color: var(--peach);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.4s, color 0.4s;
+  color: var(--peach);
+  text-decoration: none;
+}
+.link {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.4s;
+  color: var(--peach);
 }
 
-a:hover {
-    color: var(--peach);
-    border-bottom: 2px solid var(--peach);
+.link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to top right, var(--peach) 0%, #FE640B 100%);
+  transition: 0.4s;
+}
+
+.link:hover:after {
+  width: 100%;
 }
 
 
@@ -160,216 +189,6 @@ th:last-child, td:last-child { padding-right: 0; }
     padding: 0 10px;
 }
 
-/* Gradients
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.ug-peach {
-  background: var(--peach);
-  background: linear-gradient(to top right, var(--peach) 0%, #FE640B 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-rosewater {
-  background: var(--rosewater);
-  background: linear-gradient(to top right, var(--rosewater) 0%, #DC8A78 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-flamingo {
-  background: var(--flamingo);
-  background: linear-gradient(to top right, var(--flamingo) 0%, #DD7878 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-pink {
-  background: var(--pink);
-  background: linear-gradient(to top right, var(--pink) 0%, #EA76CB 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-mauve {
-  background: var(--mauve);
-  background: linear-gradient(to top right, var(--mauve) 0%, #8839EF 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-red {
-  background: var(--red);
-  background: linear-gradient(to top right, var(--red) 0%, #D20F39 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-maroon {
-  background: var(--maroon);
-  background: linear-gradient(to top right, var(--maroon) 0%, #E64553 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-yellow {
-  background: var(--yellow);
-  background: linear-gradient(to top right, var(--yellow) 0%, #DF8E1D 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-green {
-  background: var(--green);
-  background: linear-gradient(to top right, var(--green) 0%, #40A02B 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-teal {
-  background: var(--teal);
-  background: linear-gradient(to top right, var(--teal) 0%, #179299 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-sky {
-  background: var(--sky);
-  background: linear-gradient(to top right, var(--sky) 0%, #04A5E5 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-sapphire {
-  background: var(--sapphire);
-  background: linear-gradient(to top right, var(--sapphire) 0%, #209FB5 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-blue {
-  background: var(--blue);
-  background: linear-gradient(to top right, var(--blue) 0%, #1E66F5 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-lavender {
-  background: var(--lavender);
-  background: linear-gradient(to top right, var(--lavender) 0%, #7287FD 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-text {
-  background: var(--text);
-  background: linear-gradient(to top right, var(--text) 0%, #4C4F69 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-subtext1 {
-  background: var(--subtext1);
-  background: linear-gradient(to top right, var(--subtext1) 0%, #5C5F77 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-subtext0 {
-  background: var(--subtext0);
-  background: linear-gradient(to top right, var(--subtext0) 0%, #6C6F85 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-overlay2 {
-  background: var(--overlay2);
-  background: linear-gradient(to top right, var(--overlay2) 0%, #7C7F93 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-overlay1 {
-  background: var(--overlay1);
-  background: linear-gradient(to top right, var(--overlay1) 0%, #8C8FA1 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-overlay0 {
-  background: var(--overlay0);
-  background: linear-gradient(to top right, var(--overlay0) 0%, #9CA0B0 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-surface2 {
-  background: var(--surface2);
-  background: linear-gradient(to top right, var(--surface2) 0%, #ACB0BE 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-surface1 {
-  background: var(--surface1);
-  background: linear-gradient(to top right, var(--surface1) 0%, #BCC0CC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-surface0 {
-  background: var(--surface0);
-  background: linear-gradient(to top right, var(--surface0) 0%, #CCD0DA 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-base {
-  background: var(--base);
-  background: linear-gradient(to top right, var(--base) 0%, #EFF1F5 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-mantle {
-  background: var(--mantle);
-  background: linear-gradient(to top right, var(--mantle) 0%, #E6E9EF 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.ug-crust {
-  background: var(--crust);
-  background: linear-gradient(to top right, var(--crust) 0%, #DCE0E8 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
@@ -387,7 +206,7 @@ aside {
 /* Cards
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .card {
-    background-color: #181825;
+    background-color: var(--mantle);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(17, 17, 27, 20);
     padding: 1rem;
@@ -400,27 +219,6 @@ aside {
   box-shadow: 0 8px 15px rgba(17, 17, 27, 0.4);
 }
 .card li {text-align: left;}
-
-
-/* Social Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.social-links a {
-    color: #ffaa00;
-    font-size: 2rem;
-    text-decoration: none;
-    margin: 5px;
-}
-
-.social-links i {
-    color: #cdd6f4;
-}
 
 /* Tooltips
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -15,13 +15,43 @@
     <meta name="theme-color" content="#FFAA00" />
 
     <!-- <meta http-equiv="refresh" content="0; url=https://orangc.xyz"> -->
-    <link rel="stylesheet" href="styles/404.css">
+    <link rel="stylesheet" href="styles/uwu.css">
+    <style>
+        .card {
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .card iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .card {
+                padding: 5px;
+            }
+
+            .card iframe {
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                height: auto;
+            }
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="main-content">
+    <section>
         <section class="card">
-            <h1>Error 404 — wat are ye lookin' for?</h1>
+            <h1>error 404 — you're lost, here's a link to the <a href="./index.html" class="link ug-peach">main page</a></h1>
             <iframe src="https://www.youtube.com/embed/HX5brMbdjEc" title="Shikanoko Nokonoko Koshitantan"
                 frameborder="0"
                 allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
